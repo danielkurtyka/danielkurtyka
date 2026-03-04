@@ -35,7 +35,7 @@ nav a, nav button {
 
 .hero {
     height: 100vh;
-    background: url('images/hero.jpg') center/cover no-repeat;
+    background: url('hero.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,4 +103,5 @@ footer {
     padding: 30px;
     background: #000;
     font-size: 0.8rem;
+
 }
