@@ -1,26 +1,23 @@
-```javascript
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-let currentLang = "pl";
+let lang = "pl";
 
-const toggle = document.getElementById("langToggle");
+const btn = document.getElementById("langToggle");
 
-toggle.addEventListener("click", function () {
+btn.addEventListener("click", () => {
 
-currentLang = currentLang === "pl" ? "en" : "pl";
+lang = lang === "pl" ? "en" : "pl";
 
-toggle.textContent = currentLang === "pl" ? "EN" : "PL";
+btn.textContent = lang === "pl" ? "EN" : "PL";
 
 document.querySelectorAll("[data-pl]").forEach(el => {
 
-if (el.placeholder !== undefined && el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+const text = el.getAttribute("data-" + lang);
 
-el.placeholder = currentLang === "pl" ? el.dataset.pl : el.dataset.en;
-
+if(el.tagName === "INPUT" || el.tagName === "TEXTAREA"){
+el.placeholder = text;
 } else {
-
-el.textContent = currentLang === "pl" ? el.dataset.pl : el.dataset.en;
-
+el.innerText = text;
 }
 
 });
@@ -29,6 +26,3 @@ el.textContent = currentLang === "pl" ? el.dataset.pl : el.dataset.en;
 
 });
 ```
-
-
-
