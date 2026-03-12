@@ -1,5 +1,4 @@
 ```javascript
-alert("JS działa");
 document.addEventListener("DOMContentLoaded", function () {
 
 let currentLang = "pl";
@@ -52,4 +51,5 @@ revealSections();
 
 });
 ```
+
 
