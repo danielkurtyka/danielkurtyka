@@ -117,14 +117,18 @@ footer {
         transform: translateY(0);
     }
 }
-.reveal {
-opacity: 0;
-transform: translateY(40px);
-transition: all 1s ease;
+.reveal{
+opacity:1;
+transform:translateY(0);
 }
 
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
 .reveal.active {
 opacity: 1;
 transform: translateY(0);
 }
+
 
