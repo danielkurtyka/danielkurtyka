@@ -1,4 +1,3 @@
-```javascript
 document.addEventListener("DOMContentLoaded", function () {
 
 let currentLang = "pl";
@@ -51,5 +50,6 @@ revealSections();
 
 });
 ```
+
 
 
