@@ -43,8 +43,7 @@ nav a, nav button {
 }
 
 .hero-content {
-    background: rgba(0,0,0,0.6);
-    padding: 40px;
+padding:40px;
 }
 
 h1 {
@@ -126,9 +125,7 @@ transform:translateY(0);
 opacity:1;
 transform:translateY(0);
 }
-.reveal.active {
-opacity: 1;
-transform: translateY(0);
-}
+
+
 
 
