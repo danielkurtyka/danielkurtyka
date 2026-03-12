@@ -126,6 +126,41 @@ opacity:1;
 transform:translateY(0);
 }
 
+form{
+margin-top:30px;
+max-width:500px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input, textarea{
+padding:12px;
+background:#1a1a1a;
+border:1px solid #333;
+color:white;
+font-family:'Inter',sans-serif;
+}
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
+
+button{
+padding:12px;
+border:1px solid white;
+background:none;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:white;
+color:black;
+}
+
 
 
 
