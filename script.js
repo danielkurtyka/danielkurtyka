@@ -1,4 +1,3 @@
-```javascript
 document.addEventListener("DOMContentLoaded", function () {
 
 let currentLang = "pl";
@@ -25,3 +24,4 @@ el.textContent = el.dataset.en;
 
 });
 ```
+
