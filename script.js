@@ -1,3 +1,4 @@
+alert("JS działa");
 document.addEventListener("DOMContentLoaded", () => {
 
 let lang = "pl";
@@ -26,5 +27,6 @@ el.innerText = text;
 
 });
 ```
+
 
 
