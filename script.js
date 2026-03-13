@@ -1,21 +1,20 @@
-```javascript
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-let lang = "pl";
+var lang = "pl";
+var btn = document.getElementById("langToggle");
 
-const langBtn = document.getElementById("langToggle");
-
-langBtn.addEventListener("click", () => {
+btn.onclick = function () {
 
 lang = lang === "pl" ? "en" : "pl";
+btn.innerText = lang === "pl" ? "EN" : "PL";
 
-langBtn.textContent = lang === "pl" ? "EN" : "PL";
+var elements = document.querySelectorAll("[data-pl]");
 
-document.querySelectorAll("[data-pl]").forEach(el => {
+elements.forEach(function(el){
 
-const text = el.getAttribute("data-" + lang);
+var text = el.getAttribute("data-" + lang);
 
-if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+if(el.tagName === "INPUT" || el.tagName === "TEXTAREA"){
 el.placeholder = text;
 } else {
 el.innerText = text;
@@ -23,23 +22,20 @@ el.innerText = text;
 
 });
 
-});
+};
 
 
 
-/* SCROLL ANIMATION */
+function reveal(){
 
-function reveal() {
+var reveals = document.querySelectorAll(".reveal");
 
-const reveals = document.querySelectorAll(".reveal");
+reveals.forEach(function(section){
 
-reveals.forEach(section => {
+var windowHeight = window.innerHeight;
+var elementTop = section.getBoundingClientRect().top;
 
-const windowHeight = window.innerHeight;
-const elementTop = section.getBoundingClientRect().top;
-const visible = 120;
-
-if (elementTop < windowHeight - visible) {
+if(elementTop < windowHeight - 120){
 section.classList.add("active");
 }
 
@@ -48,7 +44,6 @@ section.classList.add("active");
 }
 
 window.addEventListener("scroll", reveal);
-
 reveal();
 
 });
