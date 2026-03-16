@@ -1,4 +1,3 @@
-```javascript
 document.addEventListener("DOMContentLoaded", () => {
 
 let lang = "pl";
@@ -25,10 +24,6 @@ el.innerText = text;
 
 });
 
-
-
-/* SCROLL ANIMATION */
-
 function reveal() {
 
 const reveals = document.querySelectorAll(".reveal");
@@ -52,4 +47,3 @@ window.addEventListener("scroll", reveal);
 reveal();
 
 });
-```
