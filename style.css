@@ -192,7 +192,9 @@ background:white;
 color:black;
 }
 
-
+.video-wrapper iframe{
+border-radius:10px;
+}
 
 
 
