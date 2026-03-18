@@ -47,3 +47,10 @@ window.addEventListener("scroll", reveal);
 reveal();
 
 });
+
+const menuBtn = document.getElementById("menuToggle");
+const nav = document.querySelector("nav");
+
+menuBtn.addEventListener("click", () => {
+nav.classList.toggle("active");
+});
