@@ -207,3 +207,8 @@ transition:0.3s;
 transform:scale(1.01);
 }
 
+.video-wrapper iframe{
+width:100%;
+height:60vh;
+border-radius:10px;
+}
