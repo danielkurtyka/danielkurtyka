@@ -91,10 +91,15 @@ li {
     margin-bottom: 10px;
 }
 
-.social-links a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: white;
+.social-links a{
+font-size:28px;
+margin-right:20px;
+color:white;
+transition:0.3s;
+}
+
+.social-links a:hover{
+opacity:0.6;
 }
 
 footer {
