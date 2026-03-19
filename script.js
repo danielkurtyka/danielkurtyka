@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
 let lang = "pl";
 
 const langBtn = document.getElementById("langToggle");
+const menuBtn = document.getElementById("menuToggle");
+const nav = document.querySelector("nav");
+
+/* =======================
+   LANGUAGE SWITCH
+======================= */
 
 langBtn.addEventListener("click", () => {
 
@@ -23,6 +29,27 @@ el.innerText = text;
 });
 
 });
+
+
+/* =======================
+   MOBILE MENU
+======================= */
+
+menuBtn.addEventListener("click", () => {
+nav.classList.toggle("active");
+});
+
+// zamykanie menu po kliknięciu
+document.querySelectorAll("nav a").forEach(link => {
+link.addEventListener("click", () => {
+nav.classList.remove("active");
+});
+});
+
+
+/* =======================
+   SCROLL ANIMATION
+======================= */
 
 function reveal() {
 
@@ -47,31 +74,4 @@ window.addEventListener("scroll", reveal);
 reveal();
 
 });
-
-const menuBtn = document.getElementById("menuToggle");
-const nav = document.querySelector("nav");
-
-menuBtn.addEventListener("click", () => {
-nav.classList.toggle("active");
-});
-
-// zamykanie menu po kliknięciu linku (mobile)
-document.querySelectorAll("nav a").forEach(link => {
-link.addEventListener("click", () => {
-nav.classList.remove("active");
-});
-});
-
-const menuBtn = document.getElementById("menuToggle");
-const nav = document.querySelector("nav");
-
-menuBtn.addEventListener("click", () => {
-nav.classList.toggle("active");
-});
-
-// zamykanie po kliknięciu
-document.querySelectorAll("nav a").forEach(link => {
-link.addEventListener("click", () => {
-nav.classList.remove("active");
-});
-});
+```
