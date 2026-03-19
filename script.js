@@ -1,26 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-let lang = "pl";
+var lang = "pl";
 
-const langBtn = document.getElementById("langToggle");
-const menuBtn = document.getElementById("menuToggle");
-const nav = document.querySelector("nav");
+var langBtn = document.getElementById("langToggle");
+var menuBtn = document.getElementById("menuToggle");
+var nav = document.querySelector("nav");
 
-/* =======================
-   LANGUAGE SWITCH
-======================= */
+/* LANGUAGE */
 
-langBtn.addEventListener("click", () => {
+langBtn.addEventListener("click", function () {
 
 lang = lang === "pl" ? "en" : "pl";
 
-langBtn.textContent = lang === "pl" ? "EN" : "PL";
+langBtn.innerText = lang === "pl" ? "EN" : "PL";
 
-document.querySelectorAll("[data-pl]").forEach(el => {
+var elements = document.querySelectorAll("[data-pl]");
 
-const text = el.getAttribute("data-" + lang);
+elements.forEach(function(el){
 
-if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+var text = el.getAttribute("data-" + lang);
+
+if(el.tagName === "INPUT" || el.tagName === "TEXTAREA"){
 el.placeholder = text;
 } else {
 el.innerText = text;
@@ -31,37 +31,33 @@ el.innerText = text;
 });
 
 
-/* =======================
-   MOBILE MENU
-======================= */
+/* MENU */
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click", function () {
 nav.classList.toggle("active");
 });
 
-// zamykanie menu po kliknięciu
-document.querySelectorAll("nav a").forEach(link => {
-link.addEventListener("click", () => {
+var links = document.querySelectorAll("nav a");
+
+links.forEach(function(link){
+link.addEventListener("click", function(){
 nav.classList.remove("active");
 });
 });
 
 
-/* =======================
-   SCROLL ANIMATION
-======================= */
+/* SCROLL ANIMATION */
 
-function reveal() {
+function reveal(){
 
-const reveals = document.querySelectorAll(".reveal");
+var reveals = document.querySelectorAll(".reveal");
 
-reveals.forEach(section => {
+reveals.forEach(function(section){
 
-const windowHeight = window.innerHeight;
-const elementTop = section.getBoundingClientRect().top;
-const visible = 120;
+var windowHeight = window.innerHeight;
+var elementTop = section.getBoundingClientRect().top;
 
-if (elementTop < windowHeight - visible) {
+if(elementTop < windowHeight - 120){
 section.classList.add("active");
 }
 
