@@ -298,3 +298,46 @@ h1{
 
 }
 
+/* MOBILE MENU FIX */
+@media (max-width: 768px){
+
+#menuToggle{
+display:block;
+position:absolute;
+right:20px;
+top:20px;
+font-size:28px;
+color:white;
+background:none;
+border:none;
+z-index:2000;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+transform:translateY(-100%);
+transition:0.3s;
+z-index:1500;
+}
+
+nav.active{
+transform:translateY(0);
+}
+
+nav a{
+display:block;
+margin:20px 0;
+font-size:1.5rem;
+}
+
+}
