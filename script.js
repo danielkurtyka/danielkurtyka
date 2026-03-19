@@ -61,3 +61,17 @@ link.addEventListener("click", () => {
 nav.classList.remove("active");
 });
 });
+
+const menuBtn = document.getElementById("menuToggle");
+const nav = document.querySelector("nav");
+
+menuBtn.addEventListener("click", () => {
+nav.classList.toggle("active");
+});
+
+// zamykanie po kliknięciu
+document.querySelectorAll("nav a").forEach(link => {
+link.addEventListener("click", () => {
+nav.classList.remove("active");
+});
+});
