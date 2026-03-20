@@ -29,10 +29,11 @@ header {
 
 #menuToggle{
     display: none;
-    position: fixed;
-    top: 20px;
+    position: absolute;
     right: 20px;
-    font-size: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
     color: white;
     background: none;
     border: none;
