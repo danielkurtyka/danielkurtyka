@@ -29,6 +29,9 @@ header {
 
 #menuToggle{
     display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 nav {
@@ -241,14 +244,15 @@ header{
 /* HAMBURGER */
 #menuToggle{
     display:block;
-    font-size:26px;
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:28px;
     color:white;
     background:none;
     border:none;
-    cursor:pointer;
-    z-index:1001;
+    z-index:2000;
 }
-
 /* MENU FULLSCREEN */
 nav{
     position:fixed;
