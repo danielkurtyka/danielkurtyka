@@ -63,6 +63,7 @@ nav a, nav button {
 .hero {
     height: 100vh;
     background: url('hero.jpg') center 30% / cover no-repeat;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
