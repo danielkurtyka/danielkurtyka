@@ -245,6 +245,10 @@ footer {
 
 @media (max-width: 768px){
 
+.hero{
+    background-attachment: scroll;
+}    
+    
 header{
     padding:15px 20px;
 }
